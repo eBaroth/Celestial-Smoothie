@@ -1,0 +1,24 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+/* COLORS */
+--celeste: #C1F3DF;
+--orange: #F8B555;
+
+/* FONTS COLORS */
+--black: #222;
+--white: #f1f1f1;
+
+/* FONTS */
+--serif: 'Playfair Display', serif;
+--sans-serif: 'Roboto', sans-serif;
+}
+
+body {
+    color: var(--black);
+    background-color: var(--celeste);
+}
