@@ -1,3 +1,5 @@
+/* RESET AND CO */
+
 *, ::before, ::after {
     box-sizing: border-box;
     padding: 0;
@@ -18,7 +20,126 @@
 --sans-serif: 'Roboto', sans-serif;
 }
 
-body {
+html, body {
     color: var(--black);
     background-color: var(--celeste);
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.brand-logo {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-5deg);
+}
+
+h1 {
+    font-family: var(--serif);
+    font-size: 2.5em;
+    font-weight: 400;
+    transform: translateX(-10px);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.header-nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.header-nav a {
+    display: block;
+    position: relative;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-size: 1.25em;
+    font-weight: 400;
+    border: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.header-nav a:hover {
+    border-bottom: 2px solid var(--black);
+}
+
+.sign-in-btn {
+    display: block;
+    font-family: var(--sans-serif);
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    border-radius: 10px;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sign-in-btn:hover {
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 1180px) {
+    header {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header-brand {
+        margin: 0 auto;
+    }
+    .header-nav {
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .header-nav a {
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .header-nav {
+        flex-direction: column;
+    }
+    .header-nav a {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .header-nav a {
+        font-size: 1em;
+    }
+    .sign-in-btn {
+        font-size: 1em;
+    }
 }
