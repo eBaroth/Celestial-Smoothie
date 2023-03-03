@@ -99,7 +99,7 @@ h1 {
     transform: translateY(-3px);
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1220px) {
     header {
         margin-top: 5px;
         margin-bottom: 10px;
@@ -162,31 +162,52 @@ h1 {
 }
 
 .main-txt h2 {
+    color: var(--black);
     font-family: var(--serif);
     font-size: 3.75em;
     font-weight: 400;
     margin-bottom: 50px;
-    /* min-width: 615px; */
+    animation: 2.5s ease-out movement;
+}
+
+@keyframes movement {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .main-txt p {
+    color: var(--black);
     font-family: var(--sans-serif);
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 400;
     margin-bottom: 40px;
     max-width: 500px;
+    animation: 4s ease-out movementP;
+}
+
+@keyframes movementP {
+    from {
+        color: transparent;
+    }
+    to {
+        color: var(--black);
+    }
 }
 
 .main-txt button {
     display: block;
     font-family: var(--sans-serif);
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 400;
     color: var(--white);
     background-color: var(--orange);
     border: none;
     border-radius: 10px;
-    padding: 18px 50px;
+    padding: 8px 30px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
@@ -195,14 +216,7 @@ h1 {
     transform: translateY(-3px);
 }
 
-@media screen and (max-width: 1440px) {
-    .main-txt h2 {
-        font-size: 3em;
-        max-width: 615px;
-    }
-}
-
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1220px) {
     .main-img {
         width: 350px;
         height: 350px;
@@ -212,11 +226,7 @@ h1 {
         max-width: 615px;
     }
     .main-txt p {
-        font-size: 1.25em;
-    }
-    .main-txt button {
-        font-size: 1.25em;
-        padding: 15px 30px;
+        font-size: 1em;
     }
 }
 
@@ -242,6 +252,11 @@ h1 {
 .contact img {
     width: 40px;
     height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact img:hover {
+    transform: scale(1.5);
 }
 
 .contact {
@@ -255,12 +270,13 @@ h1 {
 }
 
 .contact p {
+    color: var(--black);
     font-family: var(--sans-serif);
     font-size: 1.25em;
     font-weight: 400;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1220px) {
     .contact {
         left: 50%;
         bottom: 25px;
