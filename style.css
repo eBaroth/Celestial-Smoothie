@@ -24,7 +24,6 @@ html, body {
     color: var(--black);
     background-color: var(--celeste);
     width: 100%;
-    height: 100vh;
 }
 
 
@@ -141,5 +140,140 @@ h1 {
     }
     .sign-in-btn {
         font-size: 1em;
+    }
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 50px 5em 0 5em;
+}
+
+.main-img {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(34,34,34,0.25);
+}
+
+.main-txt h2 {
+    font-family: var(--serif);
+    font-size: 3.75em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    /* min-width: 615px; */
+}
+
+.main-txt p {
+    font-family: var(--sans-serif);
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.main-txt button {
+    display: block;
+    font-family: var(--sans-serif);
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    border-radius: 10px;
+    padding: 18px 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.main-txt button:hover {
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 1440px) {
+    .main-txt h2 {
+        font-size: 3em;
+        max-width: 615px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .main-img {
+        width: 350px;
+        height: 350px;
+    }
+    .main-txt h2 {
+        font-size: 3em;
+        max-width: 615px;
+    }
+    .main-txt p {
+        font-size: 1.25em;
+    }
+    .main-txt button {
+        font-size: 1.25em;
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main-content {
+        justify-content: center;
+    }
+    .main-txt {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* CONTACTS */
+
+.contact img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact {
+    position: absolute;
+    left: 80px;
+    bottom: 75px;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    justify-content: space-around;
+}
+
+.contact p {
+    font-family: var(--sans-serif);
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1180px) {
+    .contact {
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact p {
+        font-size: 1em;
+    }
+    .contact img {
+        width: 25px;
+        height: 25px;
     }
 }
